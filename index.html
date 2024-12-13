@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de Productos con funcionalidad de carrito de compras">
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="estilo.css"> 
+</head>
+<body>
+    <header>
+        <h1>Productos</h1>
+    </header>
+    <main>
+        <section class="product-gallery">
+            <article class="product-card">
+                <img src="imagenes/celular.jpg" alt="Imagen del Producto 1" class="product-image">
+                <h2>Celular</h2>
+                <p>Descripcion del producto</p>
+                <p class="price">$900.000</p>
+                <button class="add-to-cart" data-name="Celular" data-price="900000">Agregar al carrito</button>
+            </article>
+            <article class="product-card">
+                <img src="imagenes/computador.jpg" alt="Imagen del Producto 2" class="product-image">
+                <h2>Computador</h2>
+                <p>Descripcion del producto</p>
+                <p class="price">$1.500.000</p>
+                <button class="add-to-cart" data-name="Computador" data-price="1500000">Agregar al carrito</button>
+            </article>
+            <article class="product-card">
+                <img src="imagenes/Smart-Band-8.png" alt="Imagen del Producto 3" class="product-image">
+                <h2>Reloj</h2>
+                <p>Descripcion del producto</p>
+                <p class="price">$600.000</p>
+                <button class="add-to-cart" data-name="Reloj" data-price="600000">Agregar al carrito</button>
+            </article>
+        </section>
+    </main>
+
+    <div class="cart-modal hidden" id="cartModal" aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+        <div class="cart-content">
+            <h2 id="cartTitle">Carrito</h2>
+            <ul id="cartItems" aria-live="polite" aria-relevant="additions removals"></ul>
+            <p>Total: $<span id="cartTotal">0.00</span></p>
+            <div class="cart-buttons">
+                <button id="clearCart">Limpiar Carrito</button>
+                <button id="continueShopping">Seguir Comprando</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Productos</p>
+        <nav>
+            <a href="#">Politica de privacidad</a> | <a href="#">Terminos y condiciones</a> | <a href="#">Contacto</a>
+        </nav>
+    </footer>
+
+    <script src="tienda.js"></script> 
+</body>
+</html>
